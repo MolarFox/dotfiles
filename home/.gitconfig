@@ -1,0 +1,30 @@
+[user]
+	name = MolarFox
+	email = molar@molarfox.io
+	signingkey = A492621493679FB2
+[gpg]
+	program = gpg2
+[init]
+	defaultBranch = main
+[alias]
+	a = add
+	c = commit
+	cm = commit -m
+	ca = commit -am
+	amend = commit --amend --no-edit
+
+	pl = pull
+	ps = push
+	co = checkout
+	cob = checkout -b
+
+	s = status
+	d = diff
+	l= log --graph --date=short
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[push]
+	default = current
+

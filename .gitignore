@@ -1,7 +1,12 @@
+# All files ignored by default, specific files or dirs must be explicitly whitelisted
 *
+!*/
+home/*
 
-# Repo files
+!.gitignore
 !README.md
 
-# Home files
+# Home config files
+!home/.config/zoom.conf
+!home/.gitconfig
 
