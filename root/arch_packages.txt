@@ -36,10 +36,15 @@ swayidle
 swaybg
 alacritty
 
+pulseaudio
+playerctl
+
 waybar
 rofi
+
 wlsunset
 udiskie
+pasystray
 
 bitwarden
 firefox-developer-edition
