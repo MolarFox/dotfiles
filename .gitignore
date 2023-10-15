@@ -10,3 +10,6 @@ home/*
 !home/.config/zoom.conf
 !home/.gitconfig
 
+# Root files
+!root/arch_packages.txt
+
