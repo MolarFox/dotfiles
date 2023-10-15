@@ -1,7 +1,9 @@
 # All files ignored by default, specific files or dirs must be explicitly whitelisted
-*
-!*/
-home/*
+# *
+# !*/
+# home/*
+# This was for security during an experiment where my entire fs was symlinked for syncing to this repo
+# If you are using my dotfiles, I recommend instead that you copy-paste or individually symlink files you want to use
 
 !.gitignore
 !README.md

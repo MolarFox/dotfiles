@@ -3,10 +3,12 @@ linux
 linux-firmware
 
 vim
-tree
 fish
 w3m
 sudo
+git
+openssh
+tree
 
 parted
 grub
@@ -25,3 +27,21 @@ btrfs-progs
 e2fsprogs
 
 intel-ucode
+
+ly
+wayland
+sway
+swaylock
+swayidle
+swaybg
+alacritty
+
+waybar
+rofi
+wlsunset
+udiskie
+
+bitwarden
+firefox-developer-edition
+telegram-desktop
+discord
