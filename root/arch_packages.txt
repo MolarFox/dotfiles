@@ -10,6 +10,9 @@ git
 openssh
 tree
 
+make
+fakeroot
+
 parted
 grub
 os-prober
@@ -42,7 +45,6 @@ playerctl
 waybar
 rofi
 
-wlsunset
 udiskie
 pasystray
 
