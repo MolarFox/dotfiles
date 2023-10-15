@@ -1,0 +1,5 @@
+trizen
+
+vscodium
+vscodium-marketplace
+betterbird
