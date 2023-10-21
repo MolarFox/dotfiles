@@ -1,4 +1,4 @@
-aura
+trizen
 
 vscodium
 vscodium-marketplace

@@ -12,6 +12,7 @@ tree
 
 make
 fakeroot
+clang
 
 parted
 grub
@@ -45,6 +46,7 @@ playerctl
 waybar
 rofi
 
+mako
 udiskie
 pasystray
 
