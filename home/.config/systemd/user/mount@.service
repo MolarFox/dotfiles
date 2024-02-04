@@ -1,0 +1,12 @@
+[Unit]
+Requires=home-me.mount
+After=home-me.mount
+
+[Service]
+ExecStart=/bin/mount %I
+ExecStop=/bin/umount %I
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
+

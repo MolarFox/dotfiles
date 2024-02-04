@@ -1,0 +1,9 @@
+[Unit]
+Description=bisync of documents folder with molarfox-docs s3 bucket
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone bisync -v --refresh-times /home/molar/Documents molarfox-S3:molarfox-docs/ 
+
+[Install]
+WantedBy=multi-user.target
