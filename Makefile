@@ -24,11 +24,19 @@ pull_config:
 	cp -r $(HOME)/.config/systemd 		$(CONFIG);	\
 	cp -r $(HOME)/.config/waybar 		$(CONFIG);	\
 
-populate_all: warn_populate
-	echo todo :3
+populate_all: populate_root populate_config
+
+populate_root: warn_populate
+	cp -r ./root/* 
+
+# populate_home: warn_populate
+# 	cp ./home/.gitconfig $(HOME)/.gitconfig
+
+populate_config: warn_populate
+	cp -r $(CONFIG)* $(HOME)/.config/
 
 warn_populate:
-	@read -p "[!] This will overwrite dotfiles in your system. You should delete unwanted dotfiles locally in this folder before proceeding. Continue? [y/N]: " populate_resp;	\
+	@read -p "[!] This will overwrite dotfiles in your system. You should run `make clean` and then delete unwanted dotfiles locally in this folder before proceeding. Continue? [y/N]: " populate_resp;	\
 	if [ "$$populate_resp" != "y" ] ; then exit 1 ; fi
 
 clean:
