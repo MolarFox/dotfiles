@@ -1,6 +1,6 @@
 CONFIG = ./home/.config/
 
-.PHONY: pull_all pull_root pull_home pull_config populate_all warn_populate clean
+.PHONY: pull_all pull_root pull_home pull_config populate_all populate_root populate_config warn_populate clean
 
 help:
 	@echo "pull_all to pull dotfiles in your system into this folder for git committing. populate_all to send dotfiles in this folder out to your system"
@@ -24,7 +24,7 @@ pull_config:
 	cp -r $(HOME)/.config/systemd 		$(CONFIG);	\
 	cp -r $(HOME)/.config/waybar 		$(CONFIG);	\
 
-populate_all: populate_root populate_config
+populate_all: warn_populate populate_root populate_config
 
 populate_root: warn_populate
 	cp -r ./root/* 
