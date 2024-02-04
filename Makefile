@@ -10,7 +10,8 @@ pull_all: pull_root pull_home
 
 pull_root:
 	mkdir -p ./root/; \
-	sudo cp /root/* ./root/
+	sudo cp /root/arch_aur_packages.txt ./root/;	\
+	sudo cp /root/arch_packages.txt ./root/;		\
 
 pull_home: pull_config
 	cp $(HOME)/.gitconfig ./home/
@@ -29,7 +30,7 @@ pull_config:
 populate_all: warn_populate populate_root populate_config
 
 populate_root: warn_populate
-	cp -r ./root/* 
+	cp -r ./root/* /root
 
 # populate_home: warn_populate
 # 	cp ./home/.gitconfig $(HOME)/.gitconfig
