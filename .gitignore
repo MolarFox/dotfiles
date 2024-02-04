@@ -6,11 +6,22 @@
 !Makefile
 !README.md
 
-# Home config files
-!home/.config/zoom.conf
+# Home app config files
+!home/.config/cherrytree/*
+!home/.config/cherrytree/styles/*
+!home/.config/fish/*
+!home/.config/fish/completions/*
+!home/.config/fish/functions/*
+!home/.config/i3/*
+!home/.config/sway/*
+!home/.config/swayidle/*
+!home/.config/waybar/*
+!home/.config/waybar/modules/*
+!home/.gitconfig
+
+# Custom systemd modules
 !home/.config/systemd/user/*.service
 !home/.config/systemd/user/*.timer
-!home/.gitconfig
 
 # Root files
 !root/arch_packages.txt

@@ -5,7 +5,7 @@ CONFIG = ./home/.config/
 help:
 	@echo "pull_all to pull dotfiles in your system into this folder for git committing. populate_all to send dotfiles in this folder out to your system"
 
-pull_all: pull_root pull_home
+pull_all: pull_home
 	git status
 
 pull_root:
@@ -19,7 +19,6 @@ pull_home: pull_config
 pull_config:
 	mkdir -p $(CONFIG); \
 	cp -r $(HOME)/.config/cherrytree	$(CONFIG);	\
-	cp -r $(HOME)/.config/cura			$(CONFIG);	\
 	cp -r $(HOME)/.config/fish			$(CONFIG);	\
 	cp -r $(HOME)/.config/i3 			$(CONFIG);	\
 	cp -r $(HOME)/.config/sway 			$(CONFIG);	\
