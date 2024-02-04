@@ -6,9 +6,11 @@ help:
 	@echo "pull_all to pull dotfiles in your system into this folder for git committing. populate_all to send dotfiles in this folder out to your system"
 
 pull_all: pull_root pull_home
+	git status
 
 pull_root:
-	sudo cp -r /root/ ./
+	mkdir -p ./root/; \
+	sudo cp /root/* ./root/
 
 pull_home: pull_config
 	cp $(HOME)/.gitconfig ./home/
@@ -36,7 +38,7 @@ populate_config: warn_populate
 	cp -r $(CONFIG)* $(HOME)/.config/
 
 warn_populate:
-	@read -p "[!] This will overwrite dotfiles in your system. You should run `make clean` and then delete unwanted dotfiles locally in this folder before proceeding. Continue? [y/N]: " populate_resp;	\
+	@read -p "[!] This will overwrite dotfiles in your system. You should run 'make clean' and then delete unwanted dotfiles locally in this folder before proceeding. Continue? [y/N]: " populate_resp;	\
 	if [ "$$populate_resp" != "y" ] ; then exit 1 ; fi
 
 clean:
