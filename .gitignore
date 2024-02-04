@@ -23,6 +23,10 @@
 !home/.config/systemd/user/*.service
 !home/.config/systemd/user/*.timer
 
+# Local custom bins and scripts
+# NB: These may be your sensitive custom scripts. Don't wildcard these.
+!home/.local/bin/swaybg_random.sh
+
 # Root files
 !root/arch_packages.txt
 !root/arch_aur_packages.txt

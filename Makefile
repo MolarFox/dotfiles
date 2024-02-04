@@ -1,4 +1,5 @@
 CONFIG = ./home/.config/
+LOCAL_BIN = ./home/.local/bin
 
 .PHONY: pull_all pull_root pull_home pull_config populate_all populate_root populate_config warn_populate clean
 
@@ -13,7 +14,7 @@ pull_root:
 	sudo cp /root/arch_aur_packages.txt ./root/;	\
 	sudo cp /root/arch_packages.txt ./root/;		\
 
-pull_home: pull_config
+pull_home: pull_config pull_local_bins
 	cp $(HOME)/.gitconfig ./home/
 
 pull_config:
@@ -26,13 +27,15 @@ pull_config:
 	cp -r $(HOME)/.config/systemd 		$(CONFIG);	\
 	cp -r $(HOME)/.config/waybar 		$(CONFIG);	\
 
+# NB: These may be your sensitive custom scripts. Don't wildcard these.
+pull_local_bins:
+	mkdir -p $(LOCAL_BIN); \
+	cp -r $(HOME)/.local/bin/swaybg_random.sh	$(LOCAL_BIN);	\
+
 populate_all: warn_populate populate_root populate_config
 
 populate_root: warn_populate
 	cp -r ./root/* /root
-
-# populate_home: warn_populate
-# 	cp ./home/.gitconfig $(HOME)/.gitconfig
 
 populate_config: warn_populate
 	cp -r $(CONFIG)* $(HOME)/.config/
