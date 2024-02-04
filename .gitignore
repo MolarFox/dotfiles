@@ -1,7 +1,6 @@
 # All files ignored by default, specific files or dirs must be explicitly whitelisted
 *
 !*/
-# home/*
 
 !.gitignore
 !README.md
