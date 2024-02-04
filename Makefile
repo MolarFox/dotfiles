@@ -32,13 +32,18 @@ pull_local_bins:
 	mkdir -p $(LOCAL_BIN); \
 	cp -r $(HOME)/.local/bin/swaybg_random.sh	$(LOCAL_BIN);	\
 
-populate_all: warn_populate populate_root populate_config
 
+populate_all: warn_populate populate_config populate_local_bins
+
+# Since this should just be first-boot utils, this isn't updated during populate_all by default
 populate_root: warn_populate
 	cp -r ./root/* /root
 
 populate_config: warn_populate
 	cp -r $(CONFIG)* $(HOME)/.config/
+
+populate_local_bins: warn_populate
+	cp -r $(LOCAL_BIN)* $(HOME)/.local/bin/
 
 warn_populate:
 	@read -p "[!] This will overwrite dotfiles in your system. You should run 'make clean' and then delete unwanted dotfiles locally in this folder before proceeding. Continue? [y/N]: " populate_resp;	\
