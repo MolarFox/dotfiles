@@ -5,12 +5,12 @@ CONFIG = ./home/.config/
 help:
 	@echo "pull_all to pull dotfiles in your system into this folder for git committing. populate_all to send dotfiles in this folder out to your system"
 
-pull_all: root home
+pull_all: pull_root pull_home
 
 pull_root:
 	sudo cp -r /root/ ./
 
-pull_home: config
+pull_home: pull_config
 	cp $(HOME)/.gitconfig ./home/
 
 pull_config:
