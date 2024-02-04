@@ -6,7 +6,7 @@ CONFIG = ./home/.config/
 all: root home
 
 root:
-	sudo cp -r /root/ ./root
+	sudo cp -r /root/ ./
 
 home: config
 	cp $(HOME)/.gitconfig ./home/

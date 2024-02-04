@@ -1,7 +1,7 @@
 [user]
 	name = MolarFox
 	email = molar@molarfox.io
-	signingkey = A492621493679FB2
+	signingkey = <SIGNING_KEY>
 [gpg]
 	program = gpg2
 [init]
