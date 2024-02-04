@@ -3,6 +3,7 @@
 !*/
 
 !.gitignore
+!Makefile
 !README.md
 
 # Home config files
