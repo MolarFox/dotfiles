@@ -1,6 +1,5 @@
 .PHONY: all root home config
 
-# HOME = ${HOME}
 CONFIG = ./home/.config/
 
 all: root home
@@ -21,3 +20,8 @@ config:
 	cp -r $(HOME)/.config/swayidle		$(CONFIG);	\
 	cp -r $(HOME)/.config/systemd 		$(CONFIG);	\
 	cp -r $(HOME)/.config/waybar 		$(CONFIG);	\
+
+clean:
+	rm -rf ./home;	\
+	sudo rm -rf ./root;\
+	git restore .
