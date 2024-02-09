@@ -1,17 +1,32 @@
 # All files ignored by default, specific files or dirs must be explicitly whitelisted
-# *
-# !*/
-# home/*
-# This was for security during an experiment where my entire fs was symlinked for syncing to this repo
-# If you are using my dotfiles, I recommend instead that you copy-paste or individually symlink files you want to use
+*
+!*/
 
 !.gitignore
+!Makefile
 !README.md
 
-# Home config files
-!home/.config/zoom.conf
+# Home app config files
+!home/.config/cherrytree/*
+!home/.config/cherrytree/styles/*
+!home/.config/fish/*
+!home/.config/fish/completions/*
+!home/.config/fish/functions/*
+!home/.config/i3/*
+!home/.config/sway/*
+!home/.config/swayidle/*
+!home/.config/waybar/*
+!home/.config/waybar/modules/*
 !home/.gitconfig
+
+# Custom systemd modules
+!home/.config/systemd/user/*.service
+!home/.config/systemd/user/*.timer
+
+# Local custom bins and scripts
+# NB: These may be your sensitive custom scripts. Don't wildcard these.
+!home/.local/bin/swaybg_random.sh
 
 # Root files
 !root/arch_packages.txt
-
+!root/arch_aur_packages.txt

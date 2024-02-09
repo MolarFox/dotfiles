@@ -251,7 +251,10 @@ bar {
 #	}
 }
 
-# Custom behaviours
+# dbus env settings for screensharing to work
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# No idle when something is fullscreen
 for_window [shell=".*"] inhibit_idle fullscreen
 
 # Enable numlock and set background
@@ -259,8 +262,8 @@ input * xkb_numlock enabled
 
 # Touchpad options
 input type:touchpad {
-	tap enabled
-	natural_scroll enabled
+       tap enabled
+       natural_scroll enabled
 }
 
 exec --no-startup-id swaybg_random.sh ~/.backgrounds
@@ -271,7 +274,7 @@ exec --no-startup-id swayidle -w
 # init notification daemon
 exec --no-startup-id dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 
-# Init things which should trigger after i3 does its thing
+# Init things which should trigger after sway does its thing
 exec --no-startup-id bitwarden-desktop
 exec --no-startup-id telegram-desktop -startintray
 exec --no-startup-id discord --start-minimized
