@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:vim
 SETUVAR --export MOZ_ENABLE_WAYLAND:1
+SETUVAR --export QT_QPA_PLATFORM:wayland
 SETUVAR --export TERMINAL:alacritty
 SETUVAR --export XDG_CURRENT_DESKTOP:sway
 SETUVAR __fish_initialized:3400

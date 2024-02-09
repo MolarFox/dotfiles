@@ -7,7 +7,6 @@
 !README.md
 
 # Home app config files
-!home/.config/cherrytree/*
 !home/.config/cherrytree/styles/*
 !home/.config/fish/*
 !home/.config/fish/completions/*
