@@ -26,6 +26,7 @@ pull_config:
 	cp -r $(HOME)/.config/swayidle		$(CONFIG);	\
 	cp -r $(HOME)/.config/systemd 		$(CONFIG);	\
 	cp -r $(HOME)/.config/waybar 		$(CONFIG);	\
+	cp -r $(HOME)/.config/rclone/		$(CONFIG);	\
 
 # NB: These may be your sensitive custom scripts. Don't wildcard these.
 pull_local_bins:

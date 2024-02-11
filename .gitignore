@@ -17,6 +17,7 @@
 !home/.config/swayidle/*
 !home/.config/waybar/*
 !home/.config/waybar/modules/*
+!home/.config/rclone/filters/*
 !home/.gitconfig
 
 # Custom systemd modules
