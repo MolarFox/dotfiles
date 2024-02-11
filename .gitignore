@@ -7,7 +7,6 @@
 !README.md
 
 # Home app config files
-!home/.config/cherrytree/*
 !home/.config/cherrytree/styles/*
 !home/.config/fish/*
 !home/.config/fish/completions/*
@@ -21,7 +20,7 @@
 !home/.gitconfig
 
 # Custom systemd modules
-home/.config/systemd/user/rclone-s3-*.service
+home/.config/systemd/user/rclone-s3-*
 !home/.config/systemd/user/*.service
 !home/.config/systemd/user/*.timer
 

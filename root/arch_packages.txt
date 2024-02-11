@@ -9,6 +9,7 @@ sudo
 git
 openssh
 tree
+feh
 
 make
 fakeroot
@@ -38,7 +39,10 @@ sway
 swaylock
 swayidle
 swaybg
+
 alacritty
+pipewire
+libpipewire
 
 pulseaudio
 playerctl
