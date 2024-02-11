@@ -1,0 +1,9 @@
+# Projects filter file, should run from wherever project dir is (usually '~/Projects'
+
+- **node_modules/**
+- **venv/**
+- **.cache/**
+- **__pycache__/**
+
+# Ignores '.pjtemp' folders, to allow local things to be kept there
+- **.pjtemp/**

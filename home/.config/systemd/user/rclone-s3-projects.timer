@@ -1,5 +1,5 @@
 [Unit]
-Description=Run document bisync every 5 minutes
+Description=Run bisync every 5 minutes
 Wants=network-online.target
 After=network-online.target
 

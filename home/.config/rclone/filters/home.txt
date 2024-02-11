@@ -1,0 +1,46 @@
+# Home filter file for rclone, runs from '~/'
+
+- .ssh/**
+
+- **node_modules/**
+- **venv/**
+
+- .cache/**
+
+- .config/rclone/rclone.conf
+- .config/discord/**
+- .config/VSCodium/**
+- .config/protonmail/**
+- .config/Bitwarden/**
+- .config/calibre/**
+- .config/libreoffice/**
+- .config/chromium/**
+- .config/GIMP/**
+- .config/cef_user_data/**
+- .config/r2modmanPlus-local/**
+- .config/r2modman/**
++ .config/**
+
++ Documents/**
++ Projects/**
++ Desktop/**
++ .desktop_backgrounds
+
+- .local/Trash/**
+- .local/Steam/**
+- .zoom/**
+
++ Screenshots/**
++ Replays/**
++ .wallpapers/**
++ .screenlayout/**
+
++ .bash_aliases
++ .bash_profile
++ .bashrc
++ .gitconfig
++ .xinitrc
++ .npmrc
+
+- *
+- ./**

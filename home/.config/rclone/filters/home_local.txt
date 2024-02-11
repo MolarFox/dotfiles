@@ -1,0 +1,3 @@
+# /usr/local filter file for rclone, runs from '/usr/local/'
+
++ *
